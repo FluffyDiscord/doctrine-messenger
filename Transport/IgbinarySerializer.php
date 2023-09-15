@@ -6,9 +6,7 @@ use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\Exception\MessageDecodingFailedException;
 use Symfony\Component\Messenger\Stamp\NonSendableStampInterface;
 use Symfony\Component\Messenger\Transport\Serialization\SerializerInterface;
-use Symfony\Component\DependencyInjection\Attribute\AsAlias;
 
-#[AsAlias("messenger.default_serializer")]
 class IgbinarySerializer implements SerializerInterface
 {
     public function decode(array $encodedEnvelope): Envelope

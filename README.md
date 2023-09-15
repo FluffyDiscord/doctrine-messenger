@@ -1,7 +1,21 @@
 Doctrine Messenger Igbinary
 ==================
 
-Provides Doctrine integration for Symfony Messenger using `igbinary` as serializer
+Provides Doctrine integration for Symfony Messenger using `igbinary` as serializer.
+
+Make sure you set the serializer as default, eg `config/packages/messenger.php`
+```php
+<?php
+
+declare(strict_types=1);
+
+use Symfony\Component\Messenger\Bridge\Doctrine\Transport\IgbinarySerializer;
+use Symfony\Config\FrameworkConfig;
+
+return static function (FrameworkConfig $config): void {
+    $config->messenger()->serializer()->defaultSerializer(IgbinarySerializer::class);
+};
+```
 
 Resources
 ---------
