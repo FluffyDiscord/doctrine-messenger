@@ -145,7 +145,7 @@ class Connection implements ResetInterface
             $now,
             $availableAt,
         ], [
-            Types::STRING,
+            Types::BINARY,
             Types::STRING,
             Types::STRING,
             Types::DATETIME_IMMUTABLE,
@@ -442,7 +442,7 @@ class Connection implements ResetInterface
         $table->addColumn('id', Types::BIGINT)
             ->setAutoincrement(true)
             ->setNotnull(true);
-        $table->addColumn('body', Types::TEXT)
+        $table->addColumn('body', Types::BINARY)
             ->setNotnull(true);
         $table->addColumn('headers', Types::TEXT)
             ->setNotnull(true);

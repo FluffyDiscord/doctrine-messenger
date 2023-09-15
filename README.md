@@ -1,7 +1,7 @@
-Doctrine Messenger
+Doctrine Messenger Igbinary
 ==================
 
-Provides Doctrine integration for Symfony Messenger.
+Provides Doctrine integration for Symfony Messenger using `igbinary` as serializer
 
 Resources
 ---------
